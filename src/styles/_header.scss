@@ -1,5 +1,8 @@
 @use "./kit/variables" as *;
 @use "./kit/mixins";
+
+// ========================= ***** Navbar style ***** ====================================
+
 .nav {
   .navbar {
     font-family: sans-serif;
@@ -7,7 +10,7 @@
     display: flex;
     gap: 240px;
     @media (max-width: 480px) {
-     padding: 30px 20px;
+      padding: 30px 20px;
     }
     .company {
       @include mixins.flexbox;
@@ -18,13 +21,13 @@
           text-transform: uppercase;
           letter-spacing: 1px;
           font-weight: 400;
-         }
+        }
       }
     }
     ul {
       @media (max-width: 480px) {
         display: none;
-       }
+      }
       @include mixins.flexbox;
       gap: 30px;
       color: $white_color;
@@ -54,26 +57,25 @@
         }
       }
     }
+    .menu-btn {
+      display: none;
+      position: relative;
+      right: 20px;
+      font-size: 24px;
+      background: none;
+      border: none;
+      z-index: 100;
+      color: #fdfafa;
+      i {
+        cursor: pointer;
+      }
+      @media (max-width: 480px) {
+        display: block;
+      }
+    }
   }
 }
-
-
-
-.menu-btn {
-  display: none;
-  position: relative;
-
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 100;
-  color: #fdfafa;
-  @media (max-width: 480px) {
-    display: block;
-   }
-}
-
+// ========================= ***** Sidebar style ***** ====================================
 .sidebar {
   position: fixed;
   top: 0;
@@ -84,76 +86,57 @@
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 1000;
+  .sidebar-header {
+    @include mixins.flexbox_sb;
+    padding: 20px;
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  .sidebar-menu {
+    padding: 20px;
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      transition: color 0.2s;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      &:hover {
+        color: $brown_color;
+        background: #f5f5f567;
+      }
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 999;
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 .sidebar.open {
   right: 0;
-}
-
-.sidebar-header {
-  @include mixins.flexbox_sb;
-
-  padding: 20px;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-}
-
-.sidebar-menu {
-  padding: 20px;
-}
-
-.sidebar-menu ul {
-  list-style: none;
-}
-
-.sidebar-menu li {
-  margin-bottom: 15px;
-}
-
-.sidebar-menu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  transition: color 0.2s;
-  display: block;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.sidebar-menu a:hover {
-  color: $brown_color;
-  background: #f5f5f567;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 999;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.content {
-  padding: 80px 20px 20px;
-  transition: margin-left 0.3s;
-}
-
-.sidebar.open ~ .content {
-  margin-left: 300px;
 }

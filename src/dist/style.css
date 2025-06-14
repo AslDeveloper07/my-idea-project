@@ -80,19 +80,21 @@
 .nav .navbar ul a:hover::after {
   width: 100%;
 }
-
-.menu-btn {
+.nav .navbar .menu-btn {
   display: none;
   position: relative;
+  right: 20px;
   font-size: 24px;
   background: none;
   border: none;
-  cursor: pointer;
   z-index: 100;
   color: #fdfafa;
 }
+.nav .navbar .menu-btn i {
+  cursor: pointer;
+}
 @media (max-width: 480px) {
-  .menu-btn {
+  .nav .navbar .menu-btn {
     display: block;
   }
 }
@@ -108,39 +110,29 @@
   transition: right 0.3s ease;
   z-index: 1000;
 }
-
-.sidebar.open {
-  right: 0;
-}
-
-.sidebar-header {
+.sidebar .sidebar-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
 }
-
-.close-btn {
+.sidebar .close-btn {
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
   color: #333;
 }
-
-.sidebar-menu {
+.sidebar .sidebar-menu {
   padding: 20px;
 }
-
-.sidebar-menu ul {
+.sidebar .sidebar-menu ul {
   list-style: none;
 }
-
-.sidebar-menu li {
+.sidebar .sidebar-menu ul li {
   margin-bottom: 15px;
 }
-
-.sidebar-menu a {
+.sidebar .sidebar-menu a {
   text-decoration: none;
   color: #333;
   font-size: 18px;
@@ -149,13 +141,11 @@
   padding: 10px;
   border-radius: 5px;
 }
-
-.sidebar-menu a:hover {
+.sidebar .sidebar-menu a:hover {
   color: #9A5E44;
   background: rgba(245, 245, 245, 0.4039215686);
 }
-
-.overlay {
+.sidebar .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -167,19 +157,13 @@
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 999;
 }
-
-.overlay.active {
+.sidebar .overlay .overlay.active {
   opacity: 1;
   visibility: visible;
 }
 
-.content {
-  padding: 80px 20px 20px;
-  transition: margin-left 0.3s;
-}
-
-.sidebar.open ~ .content {
-  margin-left: 300px;
+.sidebar.open {
+  right: 0;
 }
 
 .bg-wrapper {
@@ -364,6 +348,64 @@
     font-size: 30px;
   }
 }
+.video_section .video .play-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+.video_section .video .play-container .play {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: 0 auto;
+}
+.video_section .video .play-container .play:hover {
+  transform: scale(1.1);
+}
+.video_section .video .play-container .play i {
+  color: #9A5E44;
+  font-size: 70px;
+  margin-left: 5px;
+}
+.video_section .video .video-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.video_section .video .video-container .video-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+}
+.video_section .video .video-iframe {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.video_section .video .video-iframe iframe {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  border: none;
+}
 .video_section .video span {
   position: relative;
   top: 90px;
@@ -377,82 +419,6 @@
     font-size: 12px;
     width: 330px;
   }
-}
-
-.play-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px;
-}
-
-.play {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background: rgb(255, 255, 255);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s;
-  margin: 0 auto;
-}
-
-.play:hover {
-  transform: scale(1.1);
-}
-
-.play i {
-  color: #9A5E44;
-  font-size: 70px;
-  margin-left: 5px;
-}
-
-.video-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 80%;
-  max-width: 1200px;
-}
-
-.close-btn {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.video-iframe {
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  position: relative;
-}
-
-.video-iframe iframe {
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 95%;
-  border: none;
 }
 
 @media (max-width: 480px) {
