@@ -13,6 +13,12 @@
       @include mixins.flexbox;
       h1 {
         color: $white_color;
+        @media (max-width: 480px) {
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 400;
+         }
       }
     }
     ul {
@@ -55,9 +61,8 @@
 
 .menu-btn {
   display: none;
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  position: relative;
+
   font-size: 24px;
   background: none;
   border: none;
@@ -75,7 +80,7 @@
   right: -300px;
   width: 300px;
   height: 100vh;
-  background: #fff;
+  background: $Linen_color;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 1000;
@@ -123,7 +128,7 @@
 
 .sidebar-menu a:hover {
   color: $brown_color;
-  background: #f5f5f5;
+  background: #f5f5f567;
 }
 
 .overlay {

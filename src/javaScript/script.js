@@ -38,7 +38,6 @@ const menuBtn = document.getElementById('menuBtn');
 
         const playButton = document.getElementById('playButton');
         const videoContainer = document.getElementById('videoContainer');
-        // const closeBtn = document.getElementById('closeBtn');
         const videoIframe = document.getElementById('videoIframe');
 
         // Replace this with your YouTube video ID
