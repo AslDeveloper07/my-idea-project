@@ -1,0 +1,154 @@
+@use "./kit/variables" as *;
+@use "./kit/mixins";
+.nav {
+  .navbar {
+    font-family: sans-serif;
+    padding: 20px 40px;
+    display: flex;
+    gap: 240px;
+    @media (max-width: 480px) {
+     padding: 30px 20px;
+    }
+    .company {
+      @include mixins.flexbox;
+      h1 {
+        color: $white_color;
+      }
+    }
+    ul {
+      @media (max-width: 480px) {
+        display: none;
+       }
+      @include mixins.flexbox;
+      gap: 30px;
+      color: $white_color;
+      li {
+        letter-spacing: 1.4px;
+        list-style: none;
+        position: relative;
+        display: inline-block;
+      }
+      a {
+        text-decoration: none;
+        color: $white_color;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          height: 2px;
+          width: 0;
+          background-color: $white_color;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  color: #fdfafa;
+  @media (max-width: 480px) {
+    display: block;
+   }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
+  @include mixins.flexbox_sb;
+
+  padding: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.sidebar-menu {
+  padding: 20px;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.2s;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sidebar-menu a:hover {
+  color: $brown_color;
+  background: #f5f5f5;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 999;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content {
+  padding: 80px 20px 20px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.open ~ .content {
+  margin-left: 300px;
+}
