@@ -1,0 +1,14 @@
+@use "./kit/variables" as *;
+@use "./kit/mixins";
+
+  @media (max-width: 480px) {
+    .navbar{
+        padding: 0 10px;
+        h1{
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+    }
+  }
