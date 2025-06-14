@@ -3,7 +3,7 @@ const menuBtn = document.getElementById('menuBtn');
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
 
-        // Toggle sidebar when burger icon is clicked
+        // Burger bosilganda sidebar ochilish
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             sidebar.classList.toggle('open');
@@ -16,7 +16,7 @@ const menuBtn = document.getElementById('menuBtn');
             overlay.classList.remove('active');
         });
 
-        // Close sidebar when overlay is clicked
+        // Overlay bosilganda sidebar yopilishi
         overlay.addEventListener('click', () => {
             sidebar.classList.remove('open');
             overlay.classList.remove('active');
@@ -30,21 +30,17 @@ const menuBtn = document.getElementById('menuBtn');
             }
         });
 
-
-
-
-
-
+        // =============================== ***** Video play & pouse function ***** ================================
 
         const playButton = document.getElementById('playButton');
         const videoContainer = document.getElementById('videoContainer');
         const videoIframe = document.getElementById('videoIframe');
 
-        // Replace this with your YouTube video ID
+        // You tube vidooni ID si bilan topish
         const youtubeVideoId = 'dQw4w9WgXcQ'; // Example video ID
 
         playButton.addEventListener('click', () => {
-            // Create YouTube iframe
+            // You tube iframe kodi
             videoIframe.innerHTML = `
                 <iframe src="https://youtu.be/pvqD46WiBqE?si=wunkifnU7KbHmXFR ${youtubeVideoId}?autoplay=1"
                         frameborder="0"
@@ -53,21 +49,21 @@ const menuBtn = document.getElementById('menuBtn');
                 </iframe>
             `;
 
-            // Show video container
+            // Videoni kurish uchun
             videoContainer.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         });
 
         closeBtn.addEventListener('click', () => {
-            // Hide video container
+            // Video kontinerni yashirish
             videoContainer.style.display = 'none';
             document.body.style.overflow = 'auto';
 
-            // Remove iframe to stop video playback
+            // Iffameni remove qilib yuborish
             videoIframe.innerHTML = '';
         });
 
-        // Close video when clicking outside
+        // Video iframeni yopish uchun
         videoContainer.addEventListener('click', (e) => {
             if (e.target === videoContainer) {
                 videoContainer.style.display = 'none';
