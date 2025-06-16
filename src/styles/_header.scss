@@ -4,25 +4,33 @@
 // ========================= ***** Navbar style ***** ====================================
 
 .header {
-  .nav {
+  .header__nav {
     font-family: sans-serif;
     padding: 30px 40px;
     display: flex;
     gap: 240px;
 
-    .company {
+    .header__company {
       @include mixins.flexbox;
-      h1 {
+      .header__logos {
         color: $white_color;
+        font-weight: 500;
+        font-size: 30px;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          transform: rotate(180deg);
+          transform: scale(1.1);
+          font-weight: 500;
+        }
       }
     }
 
-    ul {
+    .header__navbar {
       @include mixins.flexbox;
       gap: 30px;
       color: $white_color;
 
-      li {
+      .header__menu-item {
         letter-spacing: 1.4px;
         list-style: none;
         position: relative;
@@ -49,7 +57,7 @@
         }
       }
     }
-    .menu-btn {
+    .header__menu-btn {
       display: none;
       position: relative;
       right: 20px;
@@ -75,22 +83,23 @@
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 1000;
-  .sidebar-header {
+
+  .sidebar__header {
     @include mixins.flexbox_sb;
     padding: 20px;
   }
-  .close-btn {
+  .sidebar__closeBtn {
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     color: #333;
   }
-  .sidebar-menu {
+  .sidebar__menu {
     padding: 20px;
-    ul {
+    li {
       list-style: none;
-      li {
+      sidebar__menu-item {
         margin-bottom: 15px;
       }
     }

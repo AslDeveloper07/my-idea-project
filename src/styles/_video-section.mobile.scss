@@ -1,41 +1,48 @@
 @use "./kit/variables" as *;
 @use "./kit/mixins";
 
-.video_section {
-  @media (max-width: 480px) {
-    background-position: center;
-    background-size: 220%;
-    height: 530px;
-  }
-
+@media (max-width: 480px) {
   .video {
-    h1 {
-      @media (max-width: 480px) {
+    background-position: center;
+    background-size: 290%;
+    height: 570px;
+
+    .video__content {
+      .video__title {
         line-height: 1.6;
         font-size: 30px;
       }
-    }
 
-    span {
-      @media (max-width: 480px) {
+      .video__play-container {
+        margin: 0;
+        .video__play-btn {
+          width: 120px;
+          height: 120px;
+
+          i {
+            font-size: 60px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      span {
         font-size: 12px;
         width: 330px;
       }
     }
   }
-}
 
-@media (max-width: 480px) {
-  .play {
-    width: 70px;
-    height: 70px;
-  }
+  .video__play-btn {
+    width: 30px;
+    height: 30px;
 
-  .play i {
-    font-size: 30px;
-  }
+    .video__play-btn i {
+      font-size: 10px;
+    }
 
-  .video-wrapper {
-    width: 95%;
+    .video__modal-wrapper {
+      width: 15%;
+    }
   }
 }

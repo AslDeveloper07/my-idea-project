@@ -1,40 +1,26 @@
 @use "./kit/variables" as *;
 @use "./kit/mixins";
 
-
-
 @media (max-width: 480px) {
   .header {
-    .nav {
-      @media (max-width: 480px) {
-        padding: 30px 20px;
-      }
-      .company {
-        h1 {
-          @media (max-width: 480px) {
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 400;
-          }
-        }
+    .header__nav {
+      padding: 30px 20px;
 
+      .header__company {
+        .header__logos {
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 400;
+        }
       }
 
-      ul {
-        @media (max-width: 480px) {
-          display: none;
-        }
-
+      .header__navbar {
+        display: none;
       }
-      .menu-btn {
-
-        @media (max-width: 480px) {
-          display: block;
-        }
-
+      .header__menu-btn {
+        display: block;
       }
     }
   }
-
 }

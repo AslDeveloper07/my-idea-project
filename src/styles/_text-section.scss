@@ -1,50 +1,54 @@
 @use "./kit/variables" as *;
 @use "./kit/mixins";
 
-.text_section {
+.text {
   background-color: $Linen_color;
   height: 680px;
 
-  .texet {
+  .text__content{
     text-align: center;
     color: $grey_color;
-    h2 {
+    .text__headline {
       font-size: 40px;
       padding: 50px 0 0px 0;
       font-family: "Russo One", sans-serif;
       letter-spacing: 2px;
       line-height: 1.8;
     }
-    h3 {
+    .text__subheadline {
       padding: 30px;
       font-size: 23px;
       font-family: "Poppins", sans-serif;
       font-weight: 400;
     }
-    .texts {
+    .text__columns {
       text-align: start;
       @include mixins.flex_align_s;
       gap: 60px;
       font-family: sans-serif;
 
-      .left,
-      .right {
+      .text__left,
+      .text__right {
         width: 440px;
         margin-top: 20px;
 
-        p {
+        .text__paragraph {
           line-height: 1.3;
         }
       }
     }
-    .btn {
+    .text__btn {
       padding: 10px 20px;
       margin-top: 60px;
       border: none;
-
       border-radius: 900px;
       background-color: $brown_color;
       color: $white_color;
+      transition: transform 0.6s ease, background-color 0.4s;
+
+      &:hover {
+        transform: rotate(10deg);
+      }
     }
   }
 }

@@ -1,31 +1,24 @@
 @use "./kit/variables" as *;
 @use "./kit/mixins";
 
-.text_section {
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
+  .text {
     height: 820px;
-  }
-  .texet {
-    h2 {
-      @media (max-width: 480px) {
+
+    .text__content {
+      .text__headline {
         font-size: 20px;
       }
-    }
-    h3 {
-      @media (max-width: 480px) {
-        font-size: 13px;
+      .text__subheadline {
+        font-size: 16px;
       }
-    }
-    .texts {
-      @media (max-width: 480px) {
+      .text__columns {
         display: flex;
         flex-direction: column;
         gap: 30px;
-      }
 
-      .left,
-      .right {
-        @media (max-width: 480px) {
+        .text__left,
+        .text__right {
           width: auto;
           padding: 0 10px;
         }

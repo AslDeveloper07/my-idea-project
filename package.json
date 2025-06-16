@@ -3,8 +3,15 @@
     "@babel/cli": "^7.27.2",
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
     "jest": "^30.0.0",
-    "sass": "^1.89.2"
+    "postcss": "^8.5.5",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.89.2",
+    "stylelint": "^16.20.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-scss": "^6.12.1"
   },
   "name": "my-idea-project",
   "version": "1.0.0",
@@ -29,7 +36,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass src/styles/style.scss src/dist/style.css",
-    "sass:watch": "sass --watch src/styles/style.scss:src/dist/style.css"
+    "sass:watch": "sass --watch src/styles/style.scss:src/dist/style.css",
+    "compile": "sass styles/kit/style.scss styles/kit/style.css",
+    "lint": "stylelint 'styles/kit/**/*.scss' --fix",
+    "prod": "sass styles/kit/style.scss | postcss --use autoprefixer --use cssnano -o dist/style.min.css"
   },
   "repository": {
     "type": "git",
