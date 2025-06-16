@@ -10,7 +10,7 @@
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 875px;
+  height: 890px;
 }
 .hero {
   font-family: "Russo One", sans-serif;
@@ -18,12 +18,10 @@
   @include mixins.flexbox;
   flex-direction: column;
 
-
   .hero__logo {
     width: 230px;
     margin-top: 60px;
     margin-bottom: 30px;
-
   }
   .hero__title {
     letter-spacing: 1.5px;
@@ -34,14 +32,13 @@
     margin-top: 60px;
     text-align: center;
     color: $white_color;
-
   }
-  .hero__text{
+  .hero__text {
     margin-top: 50px;
     font-weight: 100 !important;
     width: 400px;
+    letter-spacing: 3px;
     text-align: center;
     margin-bottom: 67px;
-
   }
 }

@@ -173,7 +173,7 @@
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 875px;
+  height: 890px;
 }
 
 .hero {
@@ -203,6 +203,7 @@
   margin-top: 50px;
   font-weight: 100 !important;
   width: 400px;
+  letter-spacing: 3px;
   text-align: center;
   margin-bottom: 67px;
 }
@@ -390,6 +391,7 @@
   text-align: center;
   line-height: 1.7;
   font-weight: 100;
+  letter-spacing: 3px;
 }
 
 @media (max-width: 480px) {
