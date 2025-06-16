@@ -4,8 +4,8 @@
 
 
 @media (max-width: 480px) {
-  .nav {
-    .navbar {
+  .header {
+    .nav {
       @media (max-width: 480px) {
         padding: 30px 20px;
       }
@@ -32,7 +32,7 @@
         @media (max-width: 480px) {
           display: block;
         }
-        
+
       }
     }
   }

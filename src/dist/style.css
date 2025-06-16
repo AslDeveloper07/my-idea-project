@@ -18,38 +18,38 @@
   }
 }
 
-.nav .navbar {
+.header .nav {
   font-family: sans-serif;
-  padding: 20px 40px;
+  padding: 30px 40px;
   display: flex;
   gap: 240px;
 }
-.nav .navbar .company {
+.header .nav .company {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.nav .navbar .company h1 {
+.header .nav .company h1 {
   color: white;
 }
-.nav .navbar ul {
+.header .nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
   color: white;
 }
-.nav .navbar ul li {
+.header .nav ul li {
   letter-spacing: 1.4px;
   list-style: none;
   position: relative;
   display: inline-block;
 }
-.nav .navbar ul a {
+.header .nav ul a {
   text-decoration: none;
   color: white;
 }
-.nav .navbar ul a::after {
+.header .nav ul a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -59,10 +59,10 @@
   background-color: white;
   transition: width 0.3s ease;
 }
-.nav .navbar ul a:hover::after {
+.header .nav ul a:hover::after {
   width: 100%;
 }
-.nav .navbar .menu-btn {
+.header .nav .menu-btn {
   display: none;
   position: relative;
   right: 20px;
@@ -72,7 +72,7 @@
   z-index: 100;
   color: #fdfafa;
 }
-.nav .navbar .menu-btn i {
+.header .nav .menu-btn i {
   cursor: pointer;
 }
 
@@ -144,12 +144,12 @@
 }
 
 @media (max-width: 480px) and (max-width: 480px) {
-  .nav .navbar {
+  .header .nav {
     padding: 30px 20px;
   }
 }
 @media (max-width: 480px) and (max-width: 480px) {
-  .nav .navbar .company h1 {
+  .header .nav .company h1 {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -157,12 +157,12 @@
   }
 }
 @media (max-width: 480px) and (max-width: 480px) {
-  .nav .navbar ul {
+  .header .nav ul {
     display: none;
   }
 }
 @media (max-width: 480px) and (max-width: 480px) {
-  .nav .navbar .menu-btn {
+  .header .nav .menu-btn {
     display: block;
   }
 }
@@ -171,7 +171,7 @@
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 855px;
+  height: 875px;
 }
 
 .menu {
@@ -241,11 +241,6 @@
   background-color: #E9DAC6;
   height: 680px;
 }
-@media (max-width: 480px) {
-  .text_section {
-    height: 820px;
-  }
-}
 .text_section .texet {
   text-align: center;
   color: #4E494A;
@@ -263,11 +258,6 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
-@media (max-width: 480px) {
-  .text_section .texet h3 {
-    font-size: 13px;
-  }
-}
 .text_section .texet .texts {
   text-align: start;
   display: flex;
@@ -276,24 +266,10 @@
   gap: 60px;
   font-family: sans-serif;
 }
-@media (max-width: 480px) {
-  .text_section .texet .texts {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-}
 .text_section .texet .texts .left,
 .text_section .texet .texts .right {
   width: 440px;
   margin-top: 20px;
-}
-@media (max-width: 480px) {
-  .text_section .texet .texts .left,
-  .text_section .texet .texts .right {
-    width: auto;
-    padding: 0 10px;
-  }
 }
 .text_section .texet .texts .left p,
 .text_section .texet .texts .right p {
@@ -345,13 +321,6 @@
   background-repeat: no-repeat;
   height: 735px;
 }
-@media (max-width: 480px) {
-  .video_section {
-    background-position: center;
-    background-size: 220%;
-    height: 530px;
-  }
-}
 .video_section .video {
   font-family: "Russo One", sans-serif;
   color: white;
@@ -369,12 +338,6 @@
   text-align: center;
   color: white;
 }
-@media (max-width: 480px) {
-  .video_section .video h1 {
-    line-height: 1.6;
-    font-size: 30px;
-  }
-}
 .video_section .video .play-container {
   position: relative;
   width: 100%;
@@ -382,8 +345,8 @@
 }
 .video_section .video .play-container .play {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   background: rgb(255, 255, 255);
   border-radius: 50%;
   display: flex;
@@ -391,14 +354,14 @@
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .video_section .video .play-container .play:hover {
   transform: scale(1.1);
 }
 .video_section .video .play-container .play i {
   color: #9A5E44;
-  font-size: 70px;
+  font-size: 100px;
   margin-left: 5px;
 }
 .video_section .video .video-container {
@@ -441,6 +404,20 @@
   line-height: 1.7;
   font-weight: 100;
 }
+
+@media (max-width: 480px) {
+  .video_section {
+    background-position: center;
+    background-size: 220%;
+    height: 530px;
+  }
+}
+@media (max-width: 480px) {
+  .video_section .video h1 {
+    line-height: 1.6;
+    font-size: 30px;
+  }
+}
 @media (max-width: 480px) {
   .video_section .video span {
     font-size: 12px;
@@ -472,51 +449,20 @@
   text-align: center;
   color: white;
 }
-@media (max-width: 480px) {
-  .footer .foot {
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0 20px 0;
-  }
-}
 .footer .foot .adress {
   order: 2;
-}
-@media (max-width: 480px) {
-  .footer .foot .adress {
-    order: 3;
-    margin-bottom: 10px;
-  }
 }
 .footer .foot .adress p {
   text-align: start;
   color: white;
   font-size: 14px;
 }
-@media (max-width: 480px) {
-  .footer .foot .adress p {
-    text-align: center;
-  }
-}
 .footer .foot .adress .link {
   margin-top: 20px;
-}
-@media (max-width: 480px) {
-  .footer .foot .adress .link {
-    margin-bottom: 10px;
-  }
 }
 .footer .foot .adress a {
   text-decoration: none;
   color: #dadada;
-}
-@media (max-width: 480px) {
-  .footer .foot .adress a {
-    margin-bottom: 40px;
-  }
 }
 .footer .foot .now {
   order: 3;
@@ -527,12 +473,6 @@
 .footer .foot .brend {
   order: 2;
 }
-@media (max-width: 480px) {
-  .footer .foot .brend {
-    order: 1;
-    margin-bottom: 20px;
-  }
-}
 .footer .foot .brend h4 {
   text-align: center;
   letter-spacing: 3px;
@@ -541,6 +481,44 @@
 }
 .footer .foot img {
   width: 90px;
+}
+
+@media (max-width: 480px) {
+  .footer .foot {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 20px 0;
+  }
+}
+@media (max-width: 480px) {
+  .footer .foot .adress {
+    order: 3;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .footer .foot .adress p {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .footer .foot .adress .link {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .footer .foot .adress a {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .footer .foot .brend {
+    order: 1;
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

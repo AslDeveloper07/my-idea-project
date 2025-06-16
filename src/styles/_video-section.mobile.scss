@@ -1,2 +1,41 @@
 @use "./kit/variables" as *;
 @use "./kit/mixins";
+
+.video_section {
+  @media (max-width: 480px) {
+    background-position: center;
+    background-size: 220%;
+    height: 530px;
+  }
+
+  .video {
+    h1 {
+      @media (max-width: 480px) {
+        line-height: 1.6;
+        font-size: 30px;
+      }
+    }
+
+    span {
+      @media (max-width: 480px) {
+        font-size: 12px;
+        width: 330px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .play {
+    width: 70px;
+    height: 70px;
+  }
+
+  .play i {
+    font-size: 30px;
+  }
+
+  .video-wrapper {
+    width: 95%;
+  }
+}

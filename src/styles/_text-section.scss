@@ -4,9 +4,7 @@
 .text_section {
   background-color: $Linen_color;
   height: 680px;
-  @media (max-width: 480px) {
-    height: 820px;
-  }
+
   .texet {
     text-align: center;
     color: $grey_color;
@@ -16,36 +14,24 @@
       font-family: "Russo One", sans-serif;
       letter-spacing: 2px;
       line-height: 1.8;
-     
     }
     h3 {
       padding: 30px;
       font-size: 23px;
       font-family: "Poppins", sans-serif;
       font-weight: 400;
-      @media (max-width: 480px) {
-        font-size: 13px;
-       }
     }
     .texts {
       text-align: start;
       @include mixins.flex_align_s;
       gap: 60px;
       font-family: sans-serif;
-      @media (max-width: 480px) {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-       }
 
       .left,
       .right {
         width: 440px;
         margin-top: 20px;
-        @media (max-width: 480px) {
-          width: auto;
-          padding: 0 10px;
-         }
+
         p {
           line-height: 1.3;
         }

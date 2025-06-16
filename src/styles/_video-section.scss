@@ -12,14 +12,8 @@
   background-size: 100%;
   background-repeat: no-repeat;
   height: 735px;
-  @media (max-width: 480px) {
-    background-position: center;
-    background-size: 220%;
-    height: 530px;
-  }
 
   .video {
-
     font-family: "Russo One", sans-serif;
     color: $white_color;
     @include mixins.flexbox-sb;
@@ -33,10 +27,6 @@
       font-size: 70px;
       text-align: center;
       color: $white_color;
-      @media (max-width: 480px) {
-        line-height: 1.6;
-        font-size: 30px;
-      }
     }
 
     .play-container {
@@ -45,8 +35,8 @@
       max-width: 1200px;
       .play {
         position: relative;
-        width: 150px;
-        height: 150px;
+        width: 220px;
+        height: 220px;
         background: rgb(255, 255, 255);
         border-radius: 50%;
         display: flex;
@@ -54,13 +44,13 @@
         align-items: center;
         cursor: pointer;
         transition: transform 0.3s;
-        margin: 0 auto;
+        margin: 30px auto;
         &:hover {
           transform: scale(1.1);
         }
         i {
           color: $brown_color;
-          font-size: 70px;
+          font-size: 100px;
           margin-left: 5px;
         }
       }
@@ -82,7 +72,6 @@
         width: 80%;
         max-width: 1200px;
       }
-
     }
     .video-iframe {
       width: 100%;
@@ -90,7 +79,7 @@
       padding-bottom: 56.25%;
       position: relative;
       iframe {
-        border-radius: 20px   ;
+        border-radius: 20px;
         position: absolute;
         top: 0;
         left: 0;
@@ -101,33 +90,12 @@
     }
 
     span {
-        position: relative;
-        top: 90px;
-        width: 430px;
-        text-align: center;
-        line-height: 1.7;
-        font-weight: 100;
-
-        @media (max-width: 480px) {
-          font-size: 12px;
-        width: 330px;
-
-        }
-      }
-  }
-}
-
-@media (max-width: 480px) {
-  .play {
-      width: 70px;
-      height: 70px;
-  }
-
-  .play i {
-      font-size: 30px;
-  }
-
-  .video-wrapper {
-      width: 95%;
+      position: relative;
+      top: 90px;
+      width: 430px;
+      text-align: center;
+      line-height: 1.7;
+      font-weight: 100;
+    }
   }
 }
