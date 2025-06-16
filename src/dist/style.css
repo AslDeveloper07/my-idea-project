@@ -24,11 +24,6 @@
   display: flex;
   gap: 240px;
 }
-@media (max-width: 480px) {
-  .nav .navbar {
-    padding: 30px 20px;
-  }
-}
 .nav .navbar .company {
   display: flex;
   align-items: center;
@@ -37,25 +32,12 @@
 .nav .navbar .company h1 {
   color: white;
 }
-@media (max-width: 480px) {
-  .nav .navbar .company h1 {
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-  }
-}
 .nav .navbar ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
   color: white;
-}
-@media (max-width: 480px) {
-  .nav .navbar ul {
-    display: none;
-  }
 }
 .nav .navbar ul li {
   letter-spacing: 1.4px;
@@ -92,11 +74,6 @@
 }
 .nav .navbar .menu-btn i {
   cursor: pointer;
-}
-@media (max-width: 480px) {
-  .nav .navbar .menu-btn {
-    display: block;
-  }
 }
 
 .sidebar {
@@ -166,19 +143,35 @@
   right: 0;
 }
 
+@media (max-width: 480px) and (max-width: 480px) {
+  .nav .navbar {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 480px) and (max-width: 480px) {
+  .nav .navbar .company h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 480px) and (max-width: 480px) {
+  .nav .navbar ul {
+    display: none;
+  }
+}
+@media (max-width: 480px) and (max-width: 480px) {
+  .nav .navbar .menu-btn {
+    display: block;
+  }
+}
 .bg-wrapper {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.459)), url(./../assets/img/hero.jpg);
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
   height: 855px;
-}
-@media (max-width: 480px) {
-  .bg-wrapper {
-    background-position: center;
-    background-size: 310%;
-    height: 730px;
-  }
 }
 
 .menu {
@@ -189,21 +182,10 @@
   justify-content: center;
   flex-direction: column;
 }
-@media (max-width: 480px) {
-  .menu {
-    height: 583px;
-  }
-}
 .menu img {
   width: 230px;
   margin-top: 60px;
   margin-bottom: 30px;
-}
-@media (max-width: 480px) {
-  .menu img {
-    width: 130px;
-    margin: 0;
-  }
 }
 .menu h1 {
   letter-spacing: 1.5px;
@@ -215,18 +197,38 @@
   text-align: center;
   color: white;
 }
-@media (max-width: 480px) {
-  .menu h1 {
-    width: auto;
-    font-size: 60px;
-  }
-}
 .menu p {
   margin-top: 50px;
   font-weight: 100 !important;
   width: 400px;
   text-align: center;
   margin-bottom: 67px;
+}
+
+@media (max-width: 480px) {
+  .bg-wrapper {
+    background-position: center;
+    background-size: 310%;
+    height: 730px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    height: 583px;
+  }
+}
+@media (max-width: 480px) {
+  .menu img {
+    width: 130px;
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .menu h1 {
+    width: auto;
+    font-size: 60px;
+  }
 }
 @media (max-width: 480px) {
   .menu p {
@@ -254,11 +256,6 @@
   font-family: "Russo One", sans-serif;
   letter-spacing: 2px;
   line-height: 1.8;
-}
-@media (max-width: 480px) {
-  .text_section .texet h2 {
-    font-size: 20px;
-  }
 }
 .text_section .texet h3 {
   padding: 30px;
@@ -309,6 +306,36 @@
   border-radius: 900px;
   background-color: #9A5E44;
   color: white;
+}
+
+@media (max-width: 480px) {
+  .text_section {
+    height: 820px;
+  }
+}
+@media (max-width: 480px) {
+  .text_section .texet h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .text_section .texet h3 {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .text_section .texet .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .text_section .texet .texts .left,
+  .text_section .texet .texts .right {
+    width: auto;
+    padding: 0 10px;
+  }
 }
 
 .video_section {
@@ -438,7 +465,7 @@
   font-family: Poppins, sans-serif;
 }
 .footer .foot {
-  padding: 50px 0;
+  padding: 40px 40px 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -493,6 +520,9 @@
 }
 .footer .foot .now {
   order: 3;
+}
+.footer .foot .now p {
+  font-size: 14px;
 }
 .footer .foot .brend {
   order: 2;

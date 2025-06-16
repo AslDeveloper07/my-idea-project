@@ -1,0 +1,40 @@
+@use "./kit/variables" as *;
+@use "./kit/mixins";
+
+
+
+@media (max-width: 480px) {
+  .nav {
+    .navbar {
+      @media (max-width: 480px) {
+        padding: 30px 20px;
+      }
+      .company {
+        h1 {
+          @media (max-width: 480px) {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+          }
+        }
+
+      }
+
+      ul {
+        @media (max-width: 480px) {
+          display: none;
+        }
+
+      }
+      .menu-btn {
+
+        @media (max-width: 480px) {
+          display: block;
+        }
+        
+      }
+    }
+  }
+
+}

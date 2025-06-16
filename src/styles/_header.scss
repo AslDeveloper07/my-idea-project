@@ -9,34 +9,26 @@
     padding: 20px 40px;
     display: flex;
     gap: 240px;
-    @media (max-width: 480px) {
-      padding: 30px 20px;
-    }
+
     .company {
       @include mixins.flexbox;
       h1 {
         color: $white_color;
-        @media (max-width: 480px) {
-          font-size: 20px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-weight: 400;
-        }
       }
     }
+
     ul {
-      @media (max-width: 480px) {
-        display: none;
-      }
       @include mixins.flexbox;
       gap: 30px;
       color: $white_color;
+
       li {
         letter-spacing: 1.4px;
         list-style: none;
         position: relative;
         display: inline-block;
       }
+      
       a {
         text-decoration: none;
         color: $white_color;
@@ -68,9 +60,6 @@
       color: #fdfafa;
       i {
         cursor: pointer;
-      }
-      @media (max-width: 480px) {
-        display: block;
       }
     }
   }
@@ -140,3 +129,146 @@
 .sidebar.open {
   right: 0;
 }
+
+// @use "./kit/variables" as *;
+// @use "./kit/mixins";
+
+// // ========================= ***** Navbar style ***** ====================================
+
+// .nav {
+//   .navbar {
+//     font-family: sans-serif;
+//     padding: 20px 40px;
+//     display: flex;
+//     gap: 240px;
+//     @media (max-width: 480px) {
+//       padding: 30px 20px;
+//     }
+//     .company {
+//       @include mixins.flexbox;
+//       h1 {
+//         color: $white_color;
+//         @media (max-width: 480px) {
+//           font-size: 20px;
+//           text-transform: uppercase;
+//           letter-spacing: 1px;
+//           font-weight: 400;
+//         }
+//       }
+//     }
+//     ul {
+//       @media (max-width: 480px) {
+//         display: none;
+//       }
+//       @include mixins.flexbox;
+//       gap: 30px;
+//       color: $white_color;
+//       li {
+//         letter-spacing: 1.4px;
+//         list-style: none;
+//         position: relative;
+//         display: inline-block;
+//       }
+//       a {
+//         text-decoration: none;
+//         color: $white_color;
+
+//         &::after {
+//           content: "";
+//           position: absolute;
+//           left: 0;
+//           bottom: -6px;
+//           height: 2px;
+//           width: 0;
+//           background-color: $white_color;
+//           transition: width 0.3s ease;
+//         }
+
+//         &:hover::after {
+//           width: 100%;
+//         }
+//       }
+//     }
+//     .menu-btn {
+//       display: none;
+//       position: relative;
+//       right: 20px;
+//       font-size: 24px;
+//       background: none;
+//       border: none;
+//       z-index: 100;
+//       color: #fdfafa;
+//       i {
+//         cursor: pointer;
+//       }
+//       @media (max-width: 480px) {
+//         display: block;
+//       }
+//     }
+//   }
+// }
+// // ========================= ***** Sidebar style ***** ====================================
+// .sidebar {
+//   position: fixed;
+//   top: 0;
+//   right: -300px;
+//   width: 300px;
+//   height: 100vh;
+//   background: $Linen_color;
+//   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+//   transition: right 0.3s ease;
+//   z-index: 1000;
+//   .sidebar-header {
+//     @include mixins.flexbox_sb;
+//     padding: 20px;
+//   }
+//   .close-btn {
+//     background: none;
+//     border: none;
+//     font-size: 24px;
+//     cursor: pointer;
+//     color: #333;
+//   }
+//   .sidebar-menu {
+//     padding: 20px;
+//     ul {
+//       list-style: none;
+//       li {
+//         margin-bottom: 15px;
+//       }
+//     }
+//     a {
+//       text-decoration: none;
+//       color: #333;
+//       font-size: 18px;
+//       transition: color 0.2s;
+//       display: block;
+//       padding: 10px;
+//       border-radius: 5px;
+//       &:hover {
+//         color: $brown_color;
+//         background: #f5f5f567;
+//       }
+//     }
+//   }
+//   .overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0, 0, 0, 0.5);
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: opacity 0.3s, visibility 0.3s;
+//     z-index: 999;
+//     .overlay.active {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//   }
+// }
+
+// .sidebar.open {
+//   right: 0;
+// }

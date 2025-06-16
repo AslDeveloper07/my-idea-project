@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "jest": "^30.0.0",
     "sass": "^1.89.2"
   },
   "name": "my-idea-project",

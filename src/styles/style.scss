@@ -4,9 +4,15 @@
 @use './kit/normal';
 
 @use './header';
+@use './header.mobile'  as headerMobile;
 @use './menu';
+@use './menu.mobile'  as menuMobile;
 @use './text-section';
+@use './text-section.mobile' as textMobile;
 @use './video-section';
+@use './video-section' as videoSection;
+@use './video-section.mobile' as videoSectionMobile;
 @use './footer';
+@use './footer.mobile' as footerMobile;
 
 

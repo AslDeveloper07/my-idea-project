@@ -1,0 +1,34 @@
+@use "./kit/variables" as *;
+@use "./kit/mixins";
+
+.bg-wrapper {
+  @media (max-width: 480px) {
+    background-position: center;
+    background-size: 310%;
+    height: 730px;
+  }
+}
+.menu {
+  @media (max-width: 480px) {
+    height: 583px;
+  }
+
+  img {
+    @media (max-width: 480px) {
+      width: 130px;
+      margin: 0;
+    }
+  }
+  h1 {
+    @media (max-width: 480px) {
+      width: auto;
+      font-size: 60px;
+    }
+  }
+  p {
+    @media (max-width: 480px) {
+      width: 300px;
+      line-height: 1.7;
+    }
+  }
+}
